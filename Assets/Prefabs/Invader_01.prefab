@@ -9,9 +9,25 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -7863499497942337806, guid: 7de6239a5c61040459aa9812bb72b656, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7863499497942337806, guid: 7de6239a5c61040459aa9812bb72b656, type: 3}
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: eb7a22559c470a7d0950acf65d70432e, type: 2}
+    - target: {fileID: 685829429647781644, guid: 7de6239a5c61040459aa9812bb72b656, type: 3}
+      propertyPath: animationSprites.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 685829429647781644, guid: 7de6239a5c61040459aa9812bb72b656, type: 3}
+      propertyPath: 'animationSprites.Array.data[0]'
+      value: 
+      objectReference: {fileID: 4801227835787818748, guid: 44b0795f6472f8cf6acfa7496468abda, type: 3}
+    - target: {fileID: 685829429647781644, guid: 7de6239a5c61040459aa9812bb72b656, type: 3}
+      propertyPath: 'animationSprites.Array.data[1]'
+      value: 
+      objectReference: {fileID: -1675025149711837622, guid: 44b0795f6472f8cf6acfa7496468abda, type: 3}
     - target: {fileID: 5065697776095517268, guid: 7de6239a5c61040459aa9812bb72b656, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -22,7 +38,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5841868858791668238, guid: 7de6239a5c61040459aa9812bb72b656, type: 3}
       propertyPath: m_Name
-      value: Invader_01 Variant
+      value: Invader_01
       objectReference: {fileID: 0}
     - target: {fileID: 7224229668837639038, guid: 7de6239a5c61040459aa9812bb72b656, type: 3}
       propertyPath: m_SpriteTilingProperty.pivot.x

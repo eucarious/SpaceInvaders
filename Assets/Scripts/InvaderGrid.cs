@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class InvaderGrid : MonoBehaviour
 {
+    public ActualGM gm;
     public GameObject[] prefabs;
     
     public int rows = 5; // default 5
@@ -13,7 +14,7 @@ public class InvaderGrid : MonoBehaviour
     public float speed;
 
     private Vector3 _direction = Vector3.right;
-
+    private int initialInvaders;
 
     private void Awake()
     {
@@ -29,16 +30,16 @@ public class InvaderGrid : MonoBehaviour
                 invader.transform.localPosition = position;
             }
         }
+        initialInvaders = rows * columns;
     }
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
 
 
     void Start()
     {
-        
+        gm = FindFirstObjectByType<ActualGM>();
+        ActiveInvaders();
     }
 
-    // Update is called once per frame
     void Update()
     {
         Vector3 leftEdge = Camera.main.ViewportToWorldPoint(Vector3.zero);
@@ -52,11 +53,11 @@ public class InvaderGrid : MonoBehaviour
             {
                 continue;
             }
-            if (_direction == Vector3.right && invader.position.x >= (rightEdge.x - 0.5f))
+            if (_direction == Vector3.right && invader.position.x >= (rightEdge.x - 0.7f))
             {
                 AdvanceRow();
             }
-            if (_direction == Vector3.left && invader.position.x <= (leftEdge.x + 0.5f))
+            if (_direction == Vector3.left && invader.position.x <= (leftEdge.x + 0.7f))
             {
                 AdvanceRow();
             }
@@ -70,5 +71,27 @@ public class InvaderGrid : MonoBehaviour
         Vector3 position = this.transform.position;
         position.y -= rowPadding;
         this.transform.position = position;
+
+        UpdateSpeed();
+    }
+
+    private void UpdateSpeed()
+    {
+        speed = 0.5f + 0.1f * (initialInvaders - gm.activeInvaders);
+    }
+
+    private void ActiveInvaders()
+    {
+        int count = 0;
+
+        foreach (Transform invader in transform)
+        {
+            if (invader.gameObject.activeSelf)
+            {
+                count++;
+            }
+        }
+
+        gm.StartActiveInvaders(count);
     }
 }
