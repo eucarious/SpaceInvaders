@@ -9,7 +9,9 @@ public class Invader : MonoBehaviour
 
     private SpriteRenderer spriteRenderer;
     private int animationFrame;
-    
+
+   
+
     void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -17,6 +19,7 @@ public class Invader : MonoBehaviour
 
     private void Start()
     {
+
         gm = FindFirstObjectByType<ActualGM>();
         InvokeRepeating(nameof(AnimateSprite), animationTime, animationTime);
     }
@@ -33,26 +36,24 @@ public class Invader : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        
-    }
+  
+    
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.layer == LayerMask.NameToLayer("Bullets"))
         {
-
-            // Play Invader death animation
-            // Play Invader death SFX
-
             gm.OnInvaderKilled(this);
+        }
+
+        if (other.gameObject.layer == LayerMask.NameToLayer("Bunker"))
+        {
+            gm.OnInvaderKilledNon(this);
         }
 
         if (other.gameObject.layer == LayerMask.NameToLayer("Boundary"))
         {
             gm.OnBoundaryReached();
-
         }
     }
 }

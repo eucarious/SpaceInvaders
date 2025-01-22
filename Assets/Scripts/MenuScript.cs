@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 public class MenuScript : MonoBehaviour
 {
     public GameObject settingsPanel;
+    public GameObject creditsPanel;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -24,13 +25,18 @@ public class MenuScript : MonoBehaviour
 
     public void SettingsToggle()
     {
-        if (settingsPanel.activeSelf)
-        {
+        if (settingsPanel.activeSelf) {
             settingsPanel.SetActive(false);
-        } 
-        else
-        {
+        } else {
             settingsPanel.SetActive(true);
+        }
+    }
+    public void CreditsToggle()
+    {
+        if (creditsPanel.activeSelf) {
+            creditsPanel.SetActive(false);
+        } else {
+            creditsPanel.SetActive(true);
         }
     }
 }

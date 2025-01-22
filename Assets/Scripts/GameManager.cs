@@ -10,8 +10,11 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
-    
-    
+    public int hiScore;
+
+    public float MasterVol;
+    public float MusicVol;
+    public float SFXVol;
 
     private void Awake()
     {

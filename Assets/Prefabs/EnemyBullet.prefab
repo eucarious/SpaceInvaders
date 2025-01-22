@@ -10,23 +10,23 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3028459540207686959, guid: 25c6e13f5d269a84492b4fbe64d4b8c3, type: 3}
       propertyPath: m_Size.x
-      value: 0.24814247
+      value: 0.375
       objectReference: {fileID: 0}
     - target: {fileID: 3028459540207686959, guid: 25c6e13f5d269a84492b4fbe64d4b8c3, type: 3}
       propertyPath: m_Size.y
-      value: 0.87314177
+      value: 0.31585646
       objectReference: {fileID: 0}
     - target: {fileID: 3028459540207686959, guid: 25c6e13f5d269a84492b4fbe64d4b8c3, type: 3}
       propertyPath: m_Offset.x
-      value: -0.0016691759
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3028459540207686959, guid: 25c6e13f5d269a84492b4fbe64d4b8c3, type: 3}
       propertyPath: m_Offset.y
-      value: -0.0016691685
+      value: -0.09207177
       objectReference: {fileID: 0}
     - target: {fileID: 3028459540207686959, guid: 25c6e13f5d269a84492b4fbe64d4b8c3, type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3028459540207686959, guid: 25c6e13f5d269a84492b4fbe64d4b8c3, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
@@ -34,15 +34,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3028459540207686959, guid: 25c6e13f5d269a84492b4fbe64d4b8c3, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 5666037326731626508, guid: 25c6e13f5d269a84492b4fbe64d4b8c3, type: 3}
       propertyPath: m_Name
-      value: PlayerBullet Variant
+      value: EnemyBullet
       objectReference: {fileID: 0}
     - target: {fileID: 5666037326731626508, guid: 25c6e13f5d269a84492b4fbe64d4b8c3, type: 3}
       propertyPath: m_Layer
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6469714018097262293, guid: 25c6e13f5d269a84492b4fbe64d4b8c3, type: 3}
+      propertyPath: speed
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 6469714018097262293, guid: 25c6e13f5d269a84492b4fbe64d4b8c3, type: 3}
       propertyPath: direction.y
@@ -51,7 +55,7 @@ PrefabInstance:
     - target: {fileID: 7612984524043076870, guid: 25c6e13f5d269a84492b4fbe64d4b8c3, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -3080481381580708672, guid: 74d6c3d101263ee5583bb5e83ca7cec2, type: 3}
+      objectReference: {fileID: 21300000, guid: 1e68986116ad9ec45bd3da407f8b4413, type: 3}
     - target: {fileID: 7612984524043076870, guid: 25c6e13f5d269a84492b4fbe64d4b8c3, type: 3}
       propertyPath: m_Color.b
       value: 1

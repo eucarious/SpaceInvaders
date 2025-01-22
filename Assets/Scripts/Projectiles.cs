@@ -18,7 +18,7 @@ public class Projectiles : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        //play animation
+        //play sfx
         Destroy(this.gameObject);
     }
 }

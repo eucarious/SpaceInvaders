@@ -1,5 +1,19 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!244 &-2742340308073951560
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_EffectID: 312b181239eb0d943947624a18fa1cad
+  m_EffectName: Attenuation
+  m_MixLevel: 581507fb99ec5064786bcea4992c72a4
+  m_Parameters: []
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
 --- !u!241 &24100000
 AudioMixerController:
   m_ObjectHideFlags: 0
@@ -16,12 +30,17 @@ AudioMixerController:
   m_EnableSuspend: 1
   m_UpdateMode: 0
   m_ExposedParameters:
+  - guid: 1c3c32c6b5aa90b41ae22634cd684ef8
+    name: MasterVol
   - guid: 657c9220968949845a7a598e99c2b079
     name: MusicVol
+  - guid: 221b4cd32e0bd7b47b0dea4306bb1906
+    name: SFXVol
   m_AudioMixerGroupViews:
   - guids:
     - e57c0707d3fbf9d4bb2b9dddd4537839
     - 0de3a20ee4128874a917306d08d755e3
+    - cfda7b0bea83916458c8721dd6089add
     name: View
   m_CurrentViewIndex: 0
   m_TargetSnapshot: {fileID: 24500006}
@@ -36,6 +55,7 @@ AudioMixerGroupController:
   m_GroupID: e57c0707d3fbf9d4bb2b9dddd4537839
   m_Children:
   - {fileID: 892864970757532571}
+  - {fileID: 6083269137485738987}
   m_Volume: 1c3c32c6b5aa90b41ae22634cd684ef8
   m_Pitch: a8c9fc579730e1b40b720b8443016a83
   m_Send: 00000000000000000000000000000000
@@ -70,6 +90,7 @@ AudioMixerSnapshotController:
   m_SnapshotID: f2cd61739a7a9e14abde8dc6ea233d90
   m_FloatValues:
     657c9220968949845a7a598e99c2b079: 0
+    221b4cd32e0bd7b47b0dea4306bb1906: -10
   m_TransitionOverrides: {}
 --- !u!243 &892864970757532571
 AudioMixerGroupController:
@@ -104,3 +125,22 @@ AudioMixerEffectController:
   m_SendTarget: {fileID: 0}
   m_EnableWetMix: 0
   m_Bypass: 0
+--- !u!243 &6083269137485738987
+AudioMixerGroupController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: SFX
+  m_AudioMixer: {fileID: 24100000}
+  m_GroupID: cfda7b0bea83916458c8721dd6089add
+  m_Children: []
+  m_Volume: 221b4cd32e0bd7b47b0dea4306bb1906
+  m_Pitch: ba460c1288dac6f4dbbe67050bfdf8bf
+  m_Send: 00000000000000000000000000000000
+  m_Effects:
+  - {fileID: -2742340308073951560}
+  m_UserColorIndex: 0
+  m_Mute: 0
+  m_Solo: 0
+  m_BypassEffects: 0
